@@ -1,0 +1,9 @@
+services:
+  gerbera:
+    image: docker.io/gerbera/gerbera
+    container_name: gerbera
+    network_mode: host
+    volumes:
+      - $SERVICE_CONFIG:/var/run/gerbera
+      - $DATA:/mnt/content:ro
+
