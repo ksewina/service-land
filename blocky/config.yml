@@ -3,14 +3,10 @@ upstream:
     - cloudflare-dns.com:853
     - tcp-tls:fdns1.dismail.de:853
     - dns.google:853
-  groups:
-    default:
-      - default
-  timeout: 30s
 
 blocking:
   blockType: zeroIP
-  blackLists:
+  denylists:
     ads:
       - https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
   clientGroupsBlock:
@@ -23,4 +19,3 @@ ports:
 
 log:
   level: info
-  privacy: true
