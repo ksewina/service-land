@@ -1,5 +1,6 @@
-upstream:
-  default:
+upstreams:
+  groups:
+    default:
     - cloudflare-dns.com:853
     - tcp-tls:fdns1.dismail.de:853
     - dns.google:853
