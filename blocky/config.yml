@@ -1,0 +1,30 @@
+upstream:
+  default:
+    - cloudflare-dns.com:853
+    - dns.google:853
+  groups:
+    default:
+      - default
+upstream_timeout: 30s
+tls:
+  enabled: true
+  cert_cache_size: 1000
+  cert_min_version: TLS1.2
+  client_auth:
+    enabled: false
+
+blocking:
+  blackLists:
+    ads:
+      - https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
+  clientGroupsBlock:
+    default:
+      - ads
+
+ports:
+  dns: 53
+  http: 4000
+
+log:
+  level: info
+  privacy: true
