@@ -1,0 +1,14 @@
+services:
+  recipya:
+    image: docker.io/reaper99/recipya:v1.2.2
+    container_name: recipya
+    restart: unless-stopped
+    environment:
+      RECIPYA_SERVER_PORT: 8078
+    ports:
+    - "8078:8078"
+    volumes:
+      - "recipya-data:/root/.config/Recipya"
+  volumes:
+    recipya-data:
+
