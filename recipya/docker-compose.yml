@@ -9,6 +9,6 @@ services:
     - "8078:8078"
     volumes:
       - "recipya-data:/root/.config/Recipya"
-  volumes:
-    recipya-data:
+volumes:
+  recipya-data:
 
