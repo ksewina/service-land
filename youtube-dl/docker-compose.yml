@@ -1,15 +1,16 @@
 services:
     ytdl_material:
+        image: tzahi12345/youtubedl-material:latest
+        container_name: youtubedl-material
+        restart: always
+        ports:
+            - "8998:17442"
         environment: 
             ytdl_use_local_db: 'true'
             write_ytdl_config: 'true'
-        restart: always
         volumes:
             - ./appdata:/app/appdata
             - ./audio:/app/audio
             - ./video:/app/video
             - ./subscriptions:/app/subscriptions
             - ./users:/app/users
-        ports:
-            - "8998:17442"
-        image: tzahi12345/youtubedl-material:latest
