@@ -1,0 +1,41 @@
+# SearXNG settings
+
+use_default_settings: true
+
+general:
+  debug: false
+  instance_name: "SearXNG"
+
+search:
+  safe_search: 2
+  autocomplete: 'duckduckgo'
+
+server:
+  # Is overwritten by ${SEARXNG_SECRET}
+  secret_key: "pizza"
+  limiter: false
+  image_proxy: false
+  # public URL of the instance, to ensure correct inbound links. Is overwritten
+  # by ${SEARXNG_URL}.
+  # base_url: http://example.com/location
+
+#ui:
+#  static_use_hash: true
+#
+# preferences:
+#   lock:
+#     - autocomplete
+#     - method
+
+enabled_plugins:
+  - 'Hash plugin'
+  - 'Self Information'
+  - 'Tracker URL remover'
+  - 'Ahmia blacklist'
+  # - 'Hostnames plugin'  # see 'hostnames' configuration below
+  # - 'Open Access DOI rewrite'
+
+# plugins:
+#   - only_show_green_results
+
+

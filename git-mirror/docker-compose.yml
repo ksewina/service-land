@@ -1,0 +1,12 @@
+services:
+  git-mirror:
+    image: 
+    container_name: "git-mirror"
+    ports:
+      - 8997:8080
+
+
+
+    
+
+
