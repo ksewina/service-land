@@ -1,0 +1,8 @@
+services:
+  glance:
+    image: docker.io/glanceapp/glance:latest
+    volumes:
+      - ./glance.yml:/app/glance.yml
+    ports:
+      - 8999:8080
+    restart: unless-stopped
